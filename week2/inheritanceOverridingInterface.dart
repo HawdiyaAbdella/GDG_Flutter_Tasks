@@ -45,6 +45,26 @@ class student extends person{
   }
 }
 
+abstract class PaymentMethod {
+  void pay(double amount);
+}
+
+
+class CreditCard implements PaymentMethod {
+  @override
+  void pay(double amount) {
+    print("Payment of \$${amount} made using Credit Card");
+  }
+}
+
+
+class Paypal implements PaymentMethod {
+  @override
+  void pay(double amount) {
+    print("Payment of \$${amount} made using PayPal");
+  }
+}
+
 void main(){
 
 Device d1= new Laptop();
